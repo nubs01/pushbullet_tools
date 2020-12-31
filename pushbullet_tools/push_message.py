@@ -146,7 +146,7 @@ def setup(token : str):
     else:
         q = 'y'
 
-    if q == y:
+    if q == 'y':
         keyring.set_password('pushbullet', USERNAME, token)
         print('New API token stored for pushbullet')
     else:
