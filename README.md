@@ -35,7 +35,16 @@ with pbt.push_alert(title='With love from {username}',
                     fail_msg='There was a problem see: {error}',
                     closing_func=cleanup_func):
     /** do lots of stuff **/
+
+# It can also be used as a decorator
+@pbt.push_alert()
+def foo(a,b,c):
+    print(a + b + c)
+
+foo(1,2,3) # will send notification on completion or error
 ```
+
+
 
 The messages can be customized and a `closing_func` can be assign to run after
 process regardless of whether an error is thrown.
