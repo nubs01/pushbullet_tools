@@ -1,4 +1,8 @@
 # PushBullet Messaging and Alerting tools
+To use this you should get the pushbullet app on your phone.
+On your computer, first go to the [pushbullet](https://www.pushbullet.com/)
+website, and create an account. Then go to *Settings*  and click *Create Access
+Token*. Copy this token as you will need it for configuring pushbullet_tools.  
 
 ## Installation
 ```bash

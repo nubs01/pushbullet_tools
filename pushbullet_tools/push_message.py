@@ -139,7 +139,7 @@ def setup(token : str):
     :type token: str
     """
     assert type(token) == str, 'token must be a str.'
-    existsing = keyring.get_password('pushbullet', USERNAME)
+    existing = keyring.get_password('pushbullet', USERNAME)
     if existing is not None:
         q = input('Stored token already exists for pushbullet. '
                   'Would you like to replace it? (y/n) ')
