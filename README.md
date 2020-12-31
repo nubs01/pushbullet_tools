@@ -12,6 +12,7 @@ pip install pushbullet_tools
 pbmsg config YOUR_PUSHBULLET_API_TOKEN
 ```
 This will store your API token using your user's local python keyring.
+Some setups may also require an additional install. If config fails due to no available keyrings backend being found. Use: `pip install keyrings.alt`
 
 ## Command-line Usage
 ```bash
