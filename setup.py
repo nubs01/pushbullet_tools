@@ -14,7 +14,7 @@ if os.path.isfile(requirementPath):
 
 setuptools.setup(
     name='pushbullet_tools',
-    version='0.0.2',
+    version='0.0.3',
     author='Roshan Nanu',
     author_email='roshan.nanu@gmail.com',
     description='package for interacting with pushbullet via python',

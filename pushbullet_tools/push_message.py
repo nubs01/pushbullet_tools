@@ -188,7 +188,7 @@ def main():
         if args.link:
             push_link(args.title, args.body, args.link, token=args.token)
 
-        if arg.file:
+        if args.file:
             file_name = os.path.basename(args.file).replace('%20', ' ')
             file_type = mimetypes.guess_type(file_name)
             push_file(file_name, file_type, args.file, body=args.body)
