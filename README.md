@@ -4,6 +4,8 @@ On your computer, first go to the [pushbullet](https://www.pushbullet.com/)
 website, and create an account. Then go to *Settings*  and click *Create Access
 Token*. Copy this token as you will need it for configuring pushbullet_tools.  
 
+Read the [docs](https://nubs01.github.io/pushbullet_tools/).
+
 ## Installation
 ```bash
 pip install pushbullet_tools
