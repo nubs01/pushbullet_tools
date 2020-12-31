@@ -114,7 +114,7 @@ def push_alert(title='{hostname}', success_msg='Process complete!',
     if '{hostname}' in title:
         fmt['hostname'] = HOSTNAME
 
-    if '{username}' in header:
+    if '{username}' in title:
         fmt['username'] = USERNAME
 
     title = title.format(**fmt)
@@ -126,7 +126,7 @@ def push_alert(title='{hostname}', success_msg='Process complete!',
         if '{error}' in fail_msg:
             fail_msg = fail_msg.format(error=str(ex))
 
-        push_note(titler + ' Error!', fail_msg)
+        push_note(title + ' Error!', fail_msg)
         raise ex
     finally:
         if closing_func is not None:
