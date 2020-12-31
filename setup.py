@@ -24,8 +24,8 @@ setuptools.setup(
     license='MIT',
     packages=setuptools.find_packages(),
     entry_points = {
-        'console-scripts': [
-            'pbmsg: pushbullet_tools.push_message:main'
+        'console_scripts': [
+            'pbmsg=pushbullet_tools.push_message:main'
         ]
     },
     classifiers=[
