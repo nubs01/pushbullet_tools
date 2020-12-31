@@ -170,11 +170,11 @@ def main():
                                      'notifications via pushbullet')
     parser.add_argument('mode', help='Mode to run in. Can be "config" to '
                         'store credentials or "push" to send a message')
-    parser.add_argument(['-t', '--token'], help='API token for pushbullet')
-    parser.add_argument(['-n', '--title'], help='title of message to push', default=HOSTNAME)
-    parser.add_argument(['-m', '--body'], help='message to send', default='')
-    parser.add_argument(['-l', '--link'], help='link to send')
-    #parser.add_argument(['-f', '--file'], help='file to send')
+    parser.add_argument('-t', '--token', help='API token for pushbullet')
+    parser.add_argument('-n', '--title', help='title of message to push', default=HOSTNAME)
+    parser.add_argument('-m', '--body', help='message to send', default='')
+    parser.add_argument('-l', '--link', help='link to send')
+    parser.add_argument('-f', '--file', help='file to send')
     args = parser.parse_args()
 
     if args.mode == 'config':
