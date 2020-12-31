@@ -129,23 +129,29 @@
 <dl class="py function">
 <dt id="pushbullet_tools.push_message.main">
 <code class="sig-prename descclassname">pushbullet_tools.push_message.</code><code class="sig-name descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pushbullet_tools.push_message.main" title="Permalink to this definition">¶</a></dt>
-<dd><dl class="simple">
-<dt>usage:</dt><dd><p>pbmsg config -t PUSHBULLET_API_TOKEN
-pbmsg push -m “Message to send”
+<dd><p>Runs CLI</p>
+<p>usage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pbmsg config -t PUSHBULLET_API_TOKEN
+pbmsg push -m <span class="s2">"Message to send"</span>
 pbmsg push -t TOKEN -n MESSAGE_TITLE -m MESSAGE_BODY
-TODO:
-pgmsg push -l <a class="reference external" href="https://INSERT_WEBSITE.HERE">https://INSERT_WEBSITE.HERE</a>
-pbmsg push -f /path/to/file</p>
-</dd>
-</dl>
+pgmsg push -l https://INSERT_WEBSITE.HERE
+pbmsg push -f /path/to/file
+</pre></div>
+</div>
 </dd></dl>
 <dl class="py function">
 <dt id="pushbullet_tools.push_message.push_alert">
 <code class="sig-prename descclassname">pushbullet_tools.push_message.</code><code class="sig-name descname">push_alert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">title</span><span class="o">=</span><span class="default_value">'{hostname}'</span></em>, <em class="sig-param"><span class="n">success_msg</span><span class="o">=</span><span class="default_value">'Process complete!'</span></em>, <em class="sig-param"><span class="n">fail_msg</span><span class="o">=</span><span class="default_value">'{error}'</span></em>, <em class="sig-param"><span class="n">closing_func</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pushbullet_tools.push_message.push_alert" title="Permalink to this definition">¶</a></dt>
-<dd><p>contextmanager that will send a push message to all pushbullet linked
+<dd><p>contextmanager to wrap processes and report completion or errors</p>
+<p>contextmanager that will send a push message to all pushbullet linked
 devices when the contained processes are complete or when they error. Can
 also assign functions to be executed after everything else regardless of
 error.</p>
+<p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="n">push_alert</span><span class="p">():</span>
+    <span class="n">do_some_stuff</span><span class="p">()</span>
+</pre></div>
+</div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
