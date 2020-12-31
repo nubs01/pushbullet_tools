@@ -94,10 +94,19 @@ def push_file(file_name, file_type, file_url, body='', token=None):
 @contextmanager
 def push_alert(title='{hostname}', success_msg='Process complete!',
                fail_msg='{error}', closing_func=None):
-    """contextmanager that will send a push message to all pushbullet linked
+    """contextmanager to wrap processes and report completion or errors
+
+    contextmanager that will send a push message to all pushbullet linked
     devices when the contained processes are complete or when they error. Can
     also assign functions to be executed after everything else regardless of
     error.
+
+    Example:
+
+    .. code-block:: python
+
+        with push_alert():
+            do_some_stuff()
 
     :param title: title of the push messages sent. {hostname} will insert the
         active computer's hostname. {username} will insert the current username.
@@ -156,12 +165,15 @@ def setup(token : str):
 
 
 def main():
-    """
+    """Runs CLI
+
     usage:
+
+    .. code-block:: bash
+
         pbmsg config -t PUSHBULLET_API_TOKEN
         pbmsg push -m "Message to send"
         pbmsg push -t TOKEN -n MESSAGE_TITLE -m MESSAGE_BODY
-        TODO:
         pgmsg push -l https://INSERT_WEBSITE.HERE
         pbmsg push -f /path/to/file
     """
